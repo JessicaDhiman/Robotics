@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding: 0;
+}
+@media (max-width:1176px){
+    .hover-card .req-card{
+        height: auto;
+    }
+    .req-card-heading h1{
+        text-align: center;
+    }
+    .mainBox h1{
+        font-size: 3rem;
+    }
+}
+@media (max-width:973px){
+    .comp1-img{
+        padding:0 2rem;
+    }
+    .robot-components .main-p{
+        text-align: center;
+    }
+}
+@media (max-width:896px){
+    .navigation{
+        display: none;
+    }
+    .sidebar{
+        display: block;
+    }
+    #burger{
+        display: block;
+    }
+    .hover-card{
+        flex-direction: column;
+    }
+    .hover-card .req-card{
+        width:70%;
+        margin:4.4rem 0;
+    }
+}
+@media (max-width:896px){
+    .comp1{
+        padding-left: 1rem;
+    }
+    .comp1-img{
+        padding:0 1rem;
+    }
+}
+@media (max-width:680px){
+    .comp-cont{
+        flex-direction: column;
+    }
+    .con-heading p{
+        padding: 0 2rem;
+    }
+}
+@media (max-width:600px){
+    .hover-card .req-card{
+        width: 96%;
+    }
+    .req-card-heading h1{
+        font-size: 3rem;
+    }
+    .robot-components h1{
+        text-align: center;
+    }
+    #check:checked ~ .firstSection{
+        margin-left: 0;
+        transition: none;
+    }
+}
+@media (max-width:500px){
+    .hover-card .req-card .req-content h1{
+        font-size: 1.6rem;
+    }
+    .footer{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:360px){
+    .robot-components h1{
+        word-spacing: normal;
+        letter-spacing: normal;
+        font-size: 3rem;
+    }
+    .footer{
+        font-size: 1.1rem;
+    }
+    .firstSection{
+        height: 109vh;
+    }
+    .ro-contact{
+        padding: 15px;
+    }
+}
+@media (max-width:320px){
+    .contact-form{
+        width:87.5%;
+    }
+    .footer{
+        width: 86%;
+    }
+    .firstSection {
+        height: 128vh;
+    }
+    .req-card-heading p{
+        text-align: center;
+    }
+    .con-heading p{
+        font-size: 1.3rem;
+    }
+}

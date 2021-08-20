@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Robotics</title>
+    <script src="https://kit.fontawesome.com/8ae483dc2d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navigation background">
+        <ul class="navList">
+            <div class="logo">
+                <img src="img/robot1.jpg" alt="">
+            </div>
+            <li><a href="#">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Info">Info</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <div class="searchNav">
+            <input type="text" id="search">
+            <button class="search-btn">Search</button>
+        </div>
+    </nav>
+    
+
+    <input type="checkbox" id="check">
+    <label for="check" id="burger">
+        <i class="fa fa-bars" id="bar-btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+    <section class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home sideI"></i>Home</a></li>
+            <li><a href="#About"><i class="fa fa-bookmark sideI"></i>About</a></li>
+            <li><a href="#Info"><i class="fa fa-info-circle sideI"></i>Info</a></li>
+            <li><a href="#Contact"><i class="fa fa-address-card sideI"></i>Contact</a></li>
+            <li><a href="#Search"><i class="fa fa-search sideI"></i>Search</a></li>
+        </ul>
+    </section>
+
+    <section class="background firstSection">
+        <div class="mainBox">
+            <h1 class="animate__animated animate__backInDown animate__slow">Robotics - Introduction to Robots</h1>
+            <p>Robotics is an interdisciplinary field that integrates computer science and engineering.[1] Robotics
+                involves design, construction, operation, and use of robots. The goal of robotics is to design machines
+                that can help and assist humans.</p>
+        </div>
+    </section>
+
+    <section class="robot-card" id="About">
+        <div class="container">
+            <div class="card">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content">
+                    <h1>What is a Robot</h1>
+                    <p>A robot is an autonomous machine capable of sensing its environment, carrying out computations to
+                        make decisions, and performing actions in the real world.</p>
+                    <p>Again, people will disagree on how much autonomy a machine needs to be called a robot. You can
+                        try to tweak the original definition to suit your own opinion on this issue, but the fact is,
+                        most definitions will never be perfect.</p>
+                    <a href="https://robots.ieee.org/learn/what-is-a-robot/">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="req-card-heading" id="Info">
+        <h1>Advantages and Requirements of Robots</h1>
+        <p>Click on the cards to read</p>
+    </section>
+
+    <section class="hover-card">
+        <div class="req-card">
+            <div class="req-content">
+                <h1>Requirements of Robots in Industry</h1>
+                <p> Robots in manufacturing industries have speed, effectiveness and efficiency.
+
+                    Robots are changing the perspective of assembling & manufacturing they are intended to move
+                    materials. They are regularly used to perform obligations that are risky</p>
+                <a
+                    href="https://www.plantautomation-technology.com/articles/applications-of-industrial-robots-in-manufacturing-industries">Read
+                    More</a>
+            </div>
+            <img src="img/robot1.png" alt="">
+        </div>
+        <div class="req-card">
+            <div class="req-content">
+                <h1>Advantages of Robots in Industry</h1>
+                <p> There are plenty of advantages of Industrial robots, few are listed below in brief:
+                    Robots hold competitive advantage :
+                    Robots can do some things more efficiently and quicker than humans.
+                    Have Mechanical advantages.. </p>
+                <a
+                    href="https://www.plantautomation-technology.com/articles/applications-of-industrial-robots-in-manufacturing-industries">Read
+                    More</a>
+            </div>
+            <img src="img/robot2.png" alt="">
+        </div>
+    </section>
+
+    <section class="robot-components">
+        <h1>Robot Components</h1>
+        <p class="main-p">A robot, as a system , consists of the following elements , which are integrated together to
+            form a whole.</p>
+        <div class="comp-cont">
+            <div class="comp1">
+                <h3> Central Processing Unit</h3>
+                <p>The central processing unit (CPU) acts as the “brain” of the robot. In other words, a CPU is the
+                    robot component that provides feedback to outside stimulus.
+                    All organisms function and survive by using feedback. It’s what causes us to whip our hand away
+                    after we’ve touched a hot stove. The CPU in a robot takes in environmental data using sensors and
+                    then calls on its programming to perform the appropriate action.
+                </p>
+            </div>
+            <div class="comp1-img">
+                <img src="img/pexels-athena-2582937.jpg" alt="">
+            </div>
+        </div>
+        <div class="comp-cont">
+            <div class="comp1">
+                <h3> Sensors</h3>
+                <p>Sensors are the powerhouse of a robot’s feedback mechanism. They act like “eyes” and “ears” to help the robot take in information about its surroundings. Robots typically incorporate a wide range of sensor types to help them perform their work.Contact and proximity sensors help robots navigate more confidently and safely, especially when deployed alongside human workers. Pressure sensors may control the grip strength of a powered robotic arm, so that it doesn’t crush the merchandise it’s processing.
+                </p>
+            </div>
+            <div class="comp1-img">
+                <img src="img/sensors_robot.webp" alt="">
+            </div>
+        </div>
+        <div class="comp-cont">
+            <div class="comp1">
+                <h3> Actuators</h3>
+                <p>If sensors are the eyes and ears of the robot, its actuators function like muscles. Actuators are small motors attached directly to the structure of the robot that facilitate movement. Some of the simplest robots consist of little more than an arm, an actuator and a tool for performing work. More complex robots may use actuators to kick treads, wheels or even legs into motion.
+
+                    When robots are deployed to complete delicate tasks that require finesses and accuracy, step motors may be used. These are distinct motor designs that provide movement in specific intervals in a highly repeatable fashion.
+                </p>
+            </div>
+            <div class="comp1-img">
+                <img src="img/actuator_robot.jpg" alt="">
+            </div>
+        </div>
+        <div class="comp-cont">
+            <div class="comp1">
+                <h3> End-Effectors</h3>
+                <p>The terms “effector” and “end-effector” are sometimes used interchangeably. Both terms refer to the tools aboard the robot — that is, the tools that perform the actual work and interact with the environment or a workpiece.Factory robots may feature end-effectors such as welding torches, screwdrivers, rivet guns and paint sprayers.
+                    Mobile robots usually have manipulators and grippers for lifting objects or disposing of dangerous ordinance.
+                </p>
+            </div>
+            <div class="comp1-img">
+                <img src="img/end-eff_robot.png" alt="">
+            </div>
+        </div>
+        <div class="comp-cont">
+            <div class="comp1">
+                <h3>Power Supply</h3>
+                <p>Just like human beings consume food when they need energy, robots need energy to function as well. Almost all robots receive their power from electricity.
+                    Power supplies can still take many different forms, however. Stationary robots, like those in factories, receive direct power just like any other appliance. Mobile robots typically sport high-capacity batteries, while robotic probes and satellites are generally equipped with solar panels for harvesting energy from the sun.
+                </p>
+            </div>
+            <div class="comp1-img">
+                <img src="img/p-s_robot.jpg" alt="">
+            </div>
+        </div>
+        <div class="comp-cont">
+            <div class="comp1">
+                <h3> A Program</h3>
+                <p>A robot’s programming isn’t a physical component, but it’s still an essential part of the whole. Each of the components of robots we’ve looked at today either take in stimulus or provide a form of feedback. The program within a robot provides the logic that drives these behaviors.Human decision-making happens quickly enough that we’re usually not aware of making decisions in-the-moment. The same general concept applies to getting robots to perform specific tasks in uncertain circumstances, all without much or any human interaction.
+                </p>
+            </div>
+            <div class="comp1-img">
+                <img src="img/robot4.jpg" alt="">
+            </div>
+        </div>
+    </section> 
+
+    <section class="con-heading">
+        <p>If you want to know more about robots or you want to know about the best courses available on robotics, then you can contact us. </p>
+        <p>Follow us on <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-lg icon"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-lg icon"></i></a>
+            <a href="https://www.twitter.com"><i class="fa fa-twitter-square fa-lg icon"></i></a>
+            <a href="https://www.linkedln.com"><i class="fa fa-linkedin-square fa-lg icon"></i></a>
+            <a href="https://www.youtube.com"><i class="fa fa-youtube-square fa-lg icon"></i></a>
+        </p>
+        <p><i class="fa fa-mobile fa-lg conHead"></i> Our Contact details are: +91 786 786 6565 , +91 845 834 5007
+            <div><p><i class="fa fa-envelope fa-lg conHead"></i>Email ID: roboticsEdu@gmail.com</p></div>
+        </p>
+    </section>
+
+    <section class="contact-form" id="Contact">
+        <div class="ro-contact">
+           <h1>Contact Form</h1>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text"><i class="fa fa-user"></i> First Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text"><i class="fa fa-jpy"></i> Last Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text"><i class="fa fa-envelope-o"></i> Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span class="text"><i class="fa fa-mobile"></i> Mobile</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox textarea">
+                    <textarea required="required"></textarea>
+                    <span class="text"><i class="fa fa-commenting-o"></i> Type Your Message...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+        Copyright &copy All Rights Reserved - JESSICA DHIMAN
+    </section>
+</body>
+
+</html>

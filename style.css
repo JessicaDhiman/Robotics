@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Vollkorn', serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width:15px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,rgb(0, 135, 189));
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,rgb(73, 202, 56));
+}
+.navigation{
+    display: flex;
+    height:4.6rem;
+    background-color: rgb(0, 0, 54);
+    top:0;
+    position: sticky;
+}
+.navList{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.navList li{
+    font-size: 1.6rem;
+    padding:1.5rem;
+    list-style: none;
+}
+.navList li a{
+    text-decoration: none;
+    color: rgb(255, 203, 223);
+}
+.navList li a:hover{
+    color:rgb(253, 166, 134);
+}
+.searchNav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+.searchNav input{
+    padding:0.3rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+.search-btn{
+    font-size: 1rem;
+    padding:0.3rem 0.7rem;
+    margin:0 1rem;
+    border-radius: 0.3rem;
+    background-color: rgb(0, 0, 48);
+    color:pink;
+    cursor: pointer;
+    font-weight: bold;
+}
+.search-btn:hover{
+    background-color: pink;
+    color: rgb(0, 0, 48);
+    font-weight: bold;
+}
+.logo img{
+    width:4.5rem;
+    height:4.3rem;
+    border:2px solid white;
+    border-radius:50%;
+}
+.sidebar{
+    display: none;
+    position: fixed;
+    left:-275px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(5, 45, 68);
+    z-index: 1;
+    transition: all 0.5s ease-in;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid black;
+    transition: 0.5s;
+}
+.sidebar ul li:hover a{
+    padding-left: 55px;
+}
+.sideI{
+    margin-right: 16px;
+}
+#check{
+    display: none;
+}
+#burger{
+    display: none;
+}
+label #bar-btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+}
+label #bar-btn{
+    left: 40px;
+    top:25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top:17px;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    padding: 4px 9px;
+    transition: all 0.8s ease;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #bar-btn{
+    left:275px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left:195px;
+}
+#check:checked ~ .firstSection{
+    margin-left: 250px;
+    transition: 0.4s;
+}
+.background{
+    background:rgba(0, 0, 0, 0.7) url('img/robot4.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.firstSection{
+    height: 100vh;
+}
+.mainBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    padding: 9rem 0;
+    max-width: 68%;
+    text-align:center;
+    margin: auto;
+}
+.mainBox h1{
+    font-size: 3.9rem;
+    letter-spacing: 0.2rem;
+    padding: 0.5rem;
+}
+.mainBox p{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+.robot-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: rgb(13, 0, 27);
+}
+.container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+    width:80%;
+    height:400px;
+    height: auto;
+    padding: 4rem 0;
+    background-color: #0c002b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.container .card::before{
+    content: '';
+    position: absolute;
+    top:2px;
+    left:2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255,255,255,0.1);
+    pointer-events: none;
+}
+.container .card .content{
+    padding: 30px;
+    text-align: center;
+}
+.container .card .content h1{
+    position: relative;
+    font-size: 3.2rem;
+    color: white;
+    opacity: 0.7;
+    letter-spacing: 0.2rem;
+    transition: 0.5s;
+}
+.container .card .content p{
+    position: relative;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0.7;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+}
+.container .card:hover .content h1,
+.container .card:hover .content p{
+    opacity: 1;
+    font-weight: bold;
+}
+.container .card .content a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: white;
+    color:#0c002b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.container .card span{
+    transition: 0.5s;
+    opacity: 0;
+}
+.container .card:hover span{
+    opacity: 1;
+}
+.container .card span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #1779ff);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.container .card span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #1779ff);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.container .card span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #1779ff);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.container .card span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #1779ff);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+.req-card-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(180deg,rgb(206, 253, 255),rgb(247, 247, 247));
+   
+}
+.req-card-heading h1{
+    font-size: 3.5rem;
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.6rem;
+    color:rgb(0, 0, 65);
+    text-shadow:1px 2px 4px #1779ff;
+}
+.req-card-heading p{
+    font-size: 1.8rem;
+    color: rgb(38, 58, 119);
+    word-spacing: 0.1rem;
+    margin-bottom:2rem;
+}
+.hover-card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* min-height: 100vh; */
+    min-height: auto;
+    padding-bottom: 1.7rem;
+    align-items: center;
+    background: linear-gradient(180deg,rgb(247,247,247),rgb(186, 253, 255));
+}
+.hover-card .req-card{
+    position: relative;
+    width:45%;
+    height:24rem;
+    margin:0 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(5, 72, 99),#7094ce);
+}
+.hover-card .req-card img{
+    position: absolute;
+    bottom: 0;
+    height: 29rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.hover-card .req-card:hover img{
+    left:69%;
+    height:35rem;
+}
+.hover-card .req-card .req-content{
+    position: relative;
+    width:50%;
+    left:20%;
+    padding:1rem 1rem 1rem 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.hover-card .req-card:hover .req-content{
+    left:0;
+    opacity: 1;
+    visibility: visible;
+}
+.hover-card .req-card .req-content h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.1rem;
+}
+.hover-card .req-card .req-content p{
+    color: white;
+}
+.hover-card .req-card .req-content a{
+    position: relative;
+    color: rgb(0, 1, 54);
+    background-color: white;
+    display: inline-block;
+    padding:0.5rem 1rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.robot-components{
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    padding-bottom:5rem;
+    background:linear-gradient(180deg,rgb(8, 0, 31),rgb(18, 81, 122),rgb(8, 0, 31));
+    color: rgb(255, 255, 255);
+}
+.robot-components h1{
+    display: block;
+    margin:auto;
+    font-size: 3.4rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.3rem;
+    text-shadow: 1px 3px 7px rgb(170, 231, 255);
+}
+.robot-components .main-p{
+    display: block;
+    margin:auto;
+    font-size: 1.4rem;
+}
+.comp-cont{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.comp1{
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 4rem;
+}
+.comp1 h3{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+.comp1 p{
+    font-size: 1.2rem;
+    word-spacing: 0.1rem;
+    
+}
+.comp1-img{
+    padding:0 4rem;
+    display: flex;
+    align-items:flex-end;
+}
+.comp1-img img{
+    width:16rem;
+    height:12rem;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+.con-heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background:linear-gradient(180deg,rgb(8, 0, 31),rgb(18, 81, 122),rgb(8, 0, 31));
+    color:white;
+}
+.con-heading p{
+    text-align: center;
+    font-size:1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding:0 5rem;
+    margin:0.3rem;
+}
+.conHead{
+    margin:0 0.5rem;
+}
+.contact-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* width: 100%; */
+    /* background:rgba(0,0,0,0.7) url('img/robot5.jpg'); */
+    background:linear-gradient(180deg,rgb(8, 0, 31),rgb(18, 81, 122),rgb(8, 0, 31));
+    background-blend-mode: darken;
+    color: aliceblue;
+}
+.ro-contact{
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    width: 100%;
+    padding: 50px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+.ro-contact::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:-40%;
+    width: 100%;
+    height:100%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+.ro-contact h1{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.8rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+.ro-contact .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.ro-contact .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin:30px 0 20px;
+}
+.ro-contact .row100 .col .inputBox{
+    position: relative;
+    width:100%;
+    height:40px;
+    color:white;
+}
+.ro-contact .row100 .col .inputBox input,
+.ro-contact .row100 .col .inputBox textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border:none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    z-index: 1;
+    color:rgb(1, 1, 54);
+}
+.ro-contact .row100 .col .inputBox .text{
+    position: absolute;
+    top:0;
+    left:0;
+    line-height: 40px;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    padding: 0 10px;
+    display: block;
+    transition:0.5s;
+    pointer-events: none;
+}
+.ro-contact .row100 .col .inputBox input:focus + .text,
+.ro-contact .row100 .col .inputBox input:valid + .text
+{
+    top:-35px;
+    left: -10px;
+}
+.ro-contact .row100 .col .inputBox textarea:focus + .text,
+.ro-contact .row100 .col .inputBox textarea:valid + .text{
+    top:-35px;
+    left: -10px;
+}
+.ro-contact .row100 .col .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 98%;
+    height:2px;
+    background: white;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.ro-contact .row100 .col .inputBox input:focus ~ .line,
+.ro-contact .row100 .col .inputBox input:valid ~ .line{
+    height:100%;
+}
+.ro-contact .row100 .col .inputBox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.ro-contact .row100 .col .inputBox textarea:focus ~ .line,
+.ro-contact .row100 .col .inputBox textarea:valid ~ .line{
+    height:100%;
+}
+.ro-contact .row100 .col input[type="submit"]{
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    color:rgb(0, 0, 46);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius:2px;
+}
+.con-heading .icon{
+    color: white;
+}
+.con-heading .icon:hover{
+    color:rgb(255, 151, 54);
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg,rgb(0, 132, 184),rgb(0, 0, 36));
+    color:white;
+    font-size: 1.7rem;
+    padding:1.4rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
